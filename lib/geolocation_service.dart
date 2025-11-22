@@ -21,7 +21,19 @@ class GeolocationService {
       );
     } catch (e) {
       print('Geolocation error: $e');
-      return null;
+      // 🆕 Return fake Tunis location for testing
+      return Position(
+        latitude: 36.8065,
+        longitude: 10.1815,
+        timestamp: DateTime.now(),
+        accuracy: 10.0,
+        altitude: 0.0,
+        heading: 0.0,
+        speed: 0.0,
+        speedAccuracy: 0.0,
+        altitudeAccuracy: 0.0,
+        headingAccuracy: 0.0,
+      );
     }
   }
 }
